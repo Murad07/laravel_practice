@@ -5,6 +5,10 @@ use App\Http\Controllers\User;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\PersonController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserAuth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -44,4 +48,29 @@ Route::view('login', 'customer');
 
 Route::view('noaccess', 'noaccess');
 
+// Get data from database use Controller
 Route::get('person', [PersonController::class, 'index']);
+
+
+Route::get('employee', [EmployeeController::class, 'getData']);
+
+// Route::view('login', 'login');
+Route::POST('login-action', [LoginController::class, 'testRequest']);
+Route::post('user-auth', [UserAuth::class, 'userLogin']);
+Route::view('profile', 'profile');
+
+// Login
+Route::get('login', function() {
+    if(session()->has('user')){
+        return redirect('profile');
+    }
+    return view('login');
+});
+
+// Logout
+Route::get('logout', function() {
+    if(session()->has('user')){
+        session()->pull('user');
+    }
+    return redirect('login');
+});
