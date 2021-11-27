@@ -8,6 +8,7 @@ use App\Http\Controllers\PersonController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserAuth;
+use App\Http\Controllers\MemberController;
 
 
 /*
@@ -74,3 +75,15 @@ Route::get('logout', function() {
     }
     return redirect('login');
 });
+
+
+// Show list
+Route::get('list', [MemberController::class, 'show']);
+Route::view('add', 'addMember');
+Route::post('add', [MemberController::class, 'addData']);
+Route::get('delete/{id}', [MemberController::class, 'delete']);
+Route::get('edit/{id}', [MemberController::class, 'showData']);
+Route::post('edit/{id}', [MemberController::class, 'update']);
+Route::get('aggregate', [MemberController::class, 'operation']);
+
+Route::get('show', [EmployeeController::class, 'show']);
