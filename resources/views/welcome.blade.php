@@ -40,3 +40,9 @@
 <br>
 <h3>Mutator</h3>
 <li>Update a field data before it save in database or Edit field data before save it.</li>
+
+<br>
+<h3>Stub</h3>
+<li>- php artisan stub:publis ###- Publis the stub</li>
+<li>update controller.plain.stub file to get the function when we create new controller</li>
+<li>Same for model by using model.stub file. Suppose disable timestams for all Model.</li>
