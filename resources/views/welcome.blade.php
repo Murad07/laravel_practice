@@ -32,3 +32,7 @@
 <li>- php artisan make:seeder file_name ###-Make seeder file</li>
 <li>get seeder file inside database/seeders folder. Then update it as your need, check TestDeeder.php</li>
 <li>- php artisan db:seed --class=TestSeeder  ###-Run this command to seed the database table.</li>
+
+<br>
+<h3>Accessor</h3>
+<li>Using Accessor and update Member.php this modal file we can make First letter Capital of Member table name field.</li>
