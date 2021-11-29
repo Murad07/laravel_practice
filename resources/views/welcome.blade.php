@@ -36,3 +36,7 @@
 <br>
 <h3>Accessor</h3>
 <li>Using Accessor and update Member.php this modal file we can make First letter Capital of Member table name field.</li>
+
+<br>
+<h3>Mutator</h3>
+<li>Update a field data before it save in database or Edit field data before save it.</li>

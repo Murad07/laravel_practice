@@ -9,4 +9,8 @@ class Employee extends Model
 {
     use HasFactory;
     public $table = 'employees';
+
+    public function getCompany() {
+        return $this->hasOne('App\Models\Company');
+    }
 }

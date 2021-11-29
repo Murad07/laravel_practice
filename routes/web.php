@@ -87,3 +87,6 @@ Route::post('edit/{id}', [MemberController::class, 'update']);
 Route::get('aggregate', [MemberController::class, 'operation']);
 
 Route::get('show', [EmployeeController::class, 'show']);
+
+// Check oneToOne
+Route::get('/check', [EmployeeController::class, 'checkOneToOne']);

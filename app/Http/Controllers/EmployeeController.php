@@ -21,4 +21,9 @@ class EmployeeController extends Controller
         ->get();
         return $data;
     }
+
+    // For test OneToOne relationship
+    function checkOneToOne(){
+        return Employee::find(2)->getCompany;
+    }
 }

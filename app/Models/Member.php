@@ -13,4 +13,13 @@ class Member extends Model
     public function getNameAttribute($value) {
         return ucfirst($value);
     }
+
+    // Mutator Example
+    public function setNameAttribute($value) {
+        $this->attributes['name'] = "Mr ".$value; 
+    }
+    
+    public function setCityAttribute($value) {
+        $this->attributes['city'] = $value.", Bangladesh"; 
+    }
 }
