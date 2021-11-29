@@ -17,6 +17,8 @@ class CreateTestTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('address');
+            $table->string('age');
+            $table->string('email');
             $table->timestamps();
         });
     }
