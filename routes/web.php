@@ -90,3 +90,6 @@ Route::get('show', [EmployeeController::class, 'show']);
 
 // Check oneToOne
 Route::get('/check', [EmployeeController::class, 'checkOneToOne']);
+
+// Check oneToMany
+Route::get('one-to-many', [MemberController::class, 'checkOneToMany']);

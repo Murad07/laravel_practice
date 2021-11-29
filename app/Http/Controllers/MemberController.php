@@ -48,4 +48,9 @@ class MemberController extends Controller
     function operation () {
         return Member::avg('id');
     }
+
+    // Check one to many relation
+    function checkOneToMany() {
+        return Member::find(1)->getDevice;
+    }
 }

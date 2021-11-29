@@ -22,4 +22,9 @@ class Member extends Model
     public function setCityAttribute($value) {
         $this->attributes['city'] = $value.", Bangladesh"; 
     }
+
+    // One to Many relation with devices table
+    public function getDevice() {
+        return $this->hasMany('App\Models\Device');
+    }
 }
