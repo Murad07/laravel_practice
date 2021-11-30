@@ -46,3 +46,8 @@
 <li>- php artisan stub:publis ###- Publis the stub</li>
 <li>update controller.plain.stub file to get the function when we create new controller</li>
 <li>Same for model by using model.stub file. Suppose disable timestams for all Model.</li>
+
+<br>
+<h3>Markdown Mail Templete</h3>
+<li>- php artisan make:mail SampleMail --markdown ###- Comand for create mail template</li>
+<li>https://laravel.com/docs/8.x/mail#markdown-mailables ###- For more details about markdown mail</li>

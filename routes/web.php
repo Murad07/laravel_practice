@@ -10,7 +10,7 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserAuth;
 use App\Http\Controllers\MemberController;
-
+use App\Mail\SampleMail;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,3 +99,8 @@ Route::get('fluent-string', [ViewController::class, 'fluentString']);
 
 // Route Model Binding
 Route::get('device/{key}', [DeviceController::class, 'index']);
+
+// Markdown Mail Tamplete
+Route::get('mail', function() {
+    return new SampleMail();
+});
