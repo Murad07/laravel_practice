@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\PersonController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\LoginController;
@@ -95,3 +96,6 @@ Route::get('/check', [EmployeeController::class, 'checkOneToOne']);
 Route::get('one-to-many', [MemberController::class, 'checkOneToMany']);
 
 Route::get('fluent-string', [ViewController::class, 'fluentString']);
+
+// Route Model Binding
+Route::get('device/{key}', [DeviceController::class, 'index']);
