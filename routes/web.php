@@ -10,6 +10,7 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserAuth;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\PostController;
 use App\Mail\SampleMail;
 
 /*
@@ -104,3 +105,6 @@ Route::get('device/{key}', [DeviceController::class, 'index']);
 Route::get('mail', function() {
     return new SampleMail();
 });
+
+// Check multiple database connection
+Route::get('posts', [PostController::class, 'list']);
