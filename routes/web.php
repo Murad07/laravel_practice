@@ -93,3 +93,5 @@ Route::get('/check', [EmployeeController::class, 'checkOneToOne']);
 
 // Check oneToMany
 Route::get('one-to-many', [MemberController::class, 'checkOneToMany']);
+
+Route::get('fluent-string', [ViewController::class, 'fluentString']);
