@@ -38,3 +38,5 @@ Route::delete('delete-device/{id}', [DeviceController::class, 'delete']);
 // Search api
 Route::get('search/{key}', [DeviceController::class, 'search']);
 
+// Api Validation
+Route::post('save', [DeviceController::class, 'testData']);

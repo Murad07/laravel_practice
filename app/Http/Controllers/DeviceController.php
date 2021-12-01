@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Device;
 use Illuminate\Http\Request;
+use Validator;
 
 class DeviceController extends Controller
 {
@@ -59,5 +60,28 @@ class DeviceController extends Controller
         return Device::where('name',$name)->get();
     }
 
-    
+    // Api Validation
+    function testData(Request $req) {
+        $rules = array(
+            "member_id"=>"required|min:2"
+        );
+        $validator = Validator::make($req->all(),$rules);
+
+        if($validator->fails()){
+            return response()->json($validator->errors(),401);
+        }else{
+            $device = new Device;
+            $device->name = $req->name;
+            $device->member_id = $req->member_id;
+            $result = $device->save();
+
+
+           if($result){
+            return ["Result"=>"record has been save"];
+            }else{
+                return ["Result"=>"Operation failed"]; 
+            }
+        }
+        
+    }
 }
