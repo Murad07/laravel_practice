@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\dummyApi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -24,3 +25,6 @@ Route::get('data', [dummyApi::class, 'getData']);
 
 // data from database
 Route::get('list', [CustomerController::class, 'list']);
+
+// Post api
+Route::post('add', [DeviceController::class, 'add']);
