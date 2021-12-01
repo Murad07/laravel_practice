@@ -53,4 +53,11 @@ class DeviceController extends Controller
             return ["Result"=>"Operation failed"]; 
         }
     }
+
+    // Search api
+    function search($name) {
+        return Device::where('name',$name)->get();
+    }
+
+    
 }

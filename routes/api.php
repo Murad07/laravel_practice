@@ -34,3 +34,7 @@ Route::put('update', [DeviceController::class, 'update']);
 
 // Delete api
 Route::delete('delete-device/{id}', [DeviceController::class, 'delete']);
+
+// Search api
+Route::get('search/{key}', [DeviceController::class, 'search']);
+
