@@ -28,3 +28,6 @@ Route::get('list', [CustomerController::class, 'list']);
 
 // Post api
 Route::post('add', [DeviceController::class, 'add']);
+
+// Put api
+Route::put('update', [DeviceController::class, 'update']);
