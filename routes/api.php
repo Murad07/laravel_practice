@@ -3,6 +3,7 @@
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\dummyApi;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -40,3 +41,6 @@ Route::get('search/{key}', [DeviceController::class, 'search']);
 
 // Api Validation
 Route::post('save', [DeviceController::class, 'testData']);
+
+// Api with resource
+Route::apiResource('user', UserController::class);
